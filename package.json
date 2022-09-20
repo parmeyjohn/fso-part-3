@@ -12,8 +12,9 @@
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
+    "express": "*",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.19",
-    "express":"*"
+    "static": "^2.0.0"
   }
 }
