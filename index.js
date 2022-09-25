@@ -44,7 +44,7 @@ app.get('/info', (request, response) => {
 
 })
 
-app.delete('/api/persons/:id', (req, res) => {
+app.delete('/api/persons/:id', (req, res, next) => {
     Person.deleteOne({id: req.params.id})
     .then(() => res.status(204).end())
     .catch(err => {
@@ -53,7 +53,7 @@ app.delete('/api/persons/:id', (req, res) => {
     })    
 })
 
-app.post('/api/persons', (req, res) => {
+app.post('/api/persons', (req, res, next) => {
     const person = req.body
     console.log(person)
     if (!person.name) {
